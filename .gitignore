@@ -1,7 +1,6 @@
 # uv
 .venv/
 .python-version
-uv.lock
 
 # Python
 __pycache__/
