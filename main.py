@@ -6,7 +6,7 @@ from ticket_processor import TicketProcessor
 from llm_evaluator import LLMEvaluator
 
 load_dotenv()
-logger = setup_logger("LLMTicketEvaluator")
+logger = setup_logger("main")
 
 async def main():
     SYSTEM_PROMPT = SYSTEM_PROMPT = """
