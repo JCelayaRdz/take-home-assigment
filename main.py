@@ -9,7 +9,7 @@ load_dotenv()
 logger = setup_logger("main")
 
 async def main():
-    SYSTEM_PROMPT = SYSTEM_PROMPT = """
+    SYSTEM_PROMPT = """
 You are a Senior Quality Assurance Engineer specializing in Automated Customer Support Evaluation. 
 Your goal is to audit AI-generated responses to customer tickets with high objectivity and precision.
 
