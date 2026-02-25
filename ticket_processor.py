@@ -1,7 +1,7 @@
 import pandas as pd
-import logging
+from log import setup_logger
 
-logger = logging.getLogger(__name__)
+logger = setup_logger("TicketEvaluator")
 
 class TicketProcessor:
     def __init__(self, 
