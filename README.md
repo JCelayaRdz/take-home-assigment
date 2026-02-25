@@ -1,6 +1,27 @@
 # LLM-Based Ticket Reply Evaluation
 This repository contains an automated evaluation system designed to audit AI-generated customer support responses. The system leverages GPT-4o to assess replies across two key dimensions: Content and Format.
 
+## Project Structure
+The project structure is the following:
+
+```bash
+.
+├── data/
+│   ├── tickets.csv            # Input file with tickets and replies 
+│   └── tickets_evaluated.csv  # Output file with detailed evaluations
+├── tests/                     # Unit testing suite
+│   ├── test_llm_evaluator.py  # API Mocks and evaluation logic
+│   ├── test_schemas.py        # Pydantic type and range validation
+│   └── test_ticket_processor.py # CSV I/O testing
+├── llm_evaluator.py           # OpenAI client, retry logic, and parsing
+├── ticket_processor.py        # Pandas encapsulation for I/O
+├── schemas.py                 # Data model definitions (Pydantic)
+├── log.py                     # Centralized Logger configuration
+├── main.py                    # Async orchestrator and entry point
+├── pyproject.toml             # Project definition and dependencies (uv)
+└── uv.lock                    # Lockfile for exact reproducibility
+```
+
 ## Key Features
 - **Asynchronous Processing:** Built with `asyncio` and `Semaphore` to handle multiple evaluations in parallel, optimizing throughput and reducing execution time.
 
